@@ -3,9 +3,7 @@
 <head>
     <title>投票系统</title>
     <script>
-        // 投票功能
         async function vote(option) {
-            // 调用后端 API
             const response = await fetch('https://api.github.com/repos/<USERNAME>/my-vote-site/dispatches', {
                 method: 'POST',
                 headers: {
@@ -24,7 +22,6 @@
         async function loadResults() {
             const data = await fetch('https://raw.githubusercontent.com/<USERNAME>/my-vote-site/main/data/votes.json');
             const votes = await data.json();
-            // 更新页面显示...
         }
     </script>
 </head>
