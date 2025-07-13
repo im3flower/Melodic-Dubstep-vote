@@ -797,8 +797,8 @@
             });
             
             async function loadCSVData() {
-              const MAX_RETRIES = 3;
-              const RETRY_DELAY = 2000; // 2秒重试
+              const MAX_RETRIES = 5;
+              const RETRY_DELAY = 2000; 
               
               for (let attempt = 1; attempt <= MAX_RETRIES; attempt++) {
                 try {
@@ -811,7 +811,7 @@
                   
                   const csvData = await response.text();
                   parseCSV(csvData);
-                  return; // 成功则退出函数
+                  return
                 } catch (error) {
                   console.error(`尝试 ${attempt} 失败:`, error);
                   
@@ -825,7 +825,7 @@
                     
                     document.getElementById('retryBtn').addEventListener('click', loadCSVData);
                   } else {
-                    // 等待重试
+                      
                     await new Promise(resolve => setTimeout(resolve, RETRY_DELAY));
                   }
                 }
