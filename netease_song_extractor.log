@@ -1,0 +1,57 @@
+2025-07-12 19:31:16,328 - INFO - extracter - 开始处理文件: playlist.html
+2025-07-12 19:31:16,391 - INFO - extracter - 共找到 1000 首歌曲
+2025-07-12 19:32:18,020 - INFO - extracter - 开始处理文件: playlist.html
+2025-07-12 19:32:18,085 - INFO - extracter - 共找到 1000 首歌曲
+2025-07-12 19:32:21,600 - INFO - extracter - 开始处理文件: playlist.html
+2025-07-12 19:32:21,661 - INFO - extracter - 共找到 1000 首歌曲
+2025-07-12 19:32:45,442 - INFO - extracter - 开始处理文件: playlist.html
+2025-07-12 19:32:45,513 - INFO - extracter - 共找到 1000 首歌曲
+2025-07-12 19:32:59,744 - INFO - extracter - 开始处理文件: playlist.html
+2025-07-12 19:32:59,811 - INFO - extracter - 共找到 1000 首歌曲
+2025-07-12 19:34:23,984 - INFO - extracter - 开始处理文件: playlist.html
+2025-07-12 19:34:24,046 - INFO - extracter - 共找到 1000 首歌曲
+2025-07-12 19:34:48,218 - INFO - extracter - 开始处理文件: playlist.html
+2025-07-12 19:34:48,278 - INFO - extracter - 共找到 1000 首歌曲
+2025-07-12 19:35:46,153 - INFO - extracter - 开始处理文件: playlist.html
+2025-07-12 19:35:46,216 - INFO - extracter - 共找到 1000 首歌曲
+2025-07-12 19:35:46,223 - INFO - extracter - 歌曲处理完成，开始分析结果...
+2025-07-12 19:35:46,226 - INFO - extracter - 处理完成! 成功获取 796/1000 首歌曲信息 (79.60%)
+2025-07-12 19:35:46,228 - INFO - extracter - 有 204 首歌曲失败，已保存到 failed_songs.csv
+2025-07-12 19:35:46,228 - INFO - extracter - 已生成重试脚本: retry_failed_songs.py
+2025-07-12 19:35:46,228 - INFO - extracter - 处理流程全部完成！
+2025-07-12 19:35:58,730 - INFO - extracter - 开始处理文件: playlist.html
+2025-07-12 19:35:58,793 - INFO - extracter - 共找到 1000 首歌曲
+2025-07-12 19:40:29,824 - INFO - extracter - 歌曲处理完成，开始分析结果...
+2025-07-12 19:40:29,827 - ERROR - extracter - 结果分析失败: '艺人'
+2025-07-12 19:40:29,828 - ERROR - extracter - 结果分析失败
+2025-07-12 19:45:22,091 - INFO - extracter - 开始处理文件: playlist2.html
+2025-07-12 19:45:22,154 - INFO - extracter - 共找到 1000 首歌曲
+2025-07-12 19:49:52,253 - INFO - extracter - 歌曲处理完成，开始分析结果...
+2025-07-12 19:49:52,261 - ERROR - extracter - 结果分析失败: '艺人'
+2025-07-12 19:49:52,261 - ERROR - extracter - 结果分析失败
+2025-07-12 19:50:29,937 - INFO - extracter - 开始处理文件: playlist3.html
+2025-07-12 19:50:29,938 - ERROR - extracter - 文件读取失败: [Errno 2] No such file or directory: 'playlist3.html'
+2025-07-12 19:50:29,939 - ERROR - extracter - 文件处理失败
+2025-07-12 19:52:32,562 - INFO - extracter - 开始处理文件: playlist3.html
+2025-07-12 19:52:32,562 - ERROR - extracter - 文件读取失败: [Errno 2] No such file or directory: 'playlist3.html'
+2025-07-12 19:52:32,562 - ERROR - extracter - 文件处理失败
+2025-07-12 19:53:16,320 - INFO - extracter - 开始处理文件: playlist3.html
+2025-07-12 19:53:16,412 - INFO - extracter - 共找到 1000 首歌曲
+2025-07-12 19:57:49,957 - INFO - extracter - 歌曲处理完成，开始分析结果...
+2025-07-12 19:57:49,970 - ERROR - extracter - 结果分析失败: '艺人'
+2025-07-12 19:57:49,970 - ERROR - extracter - 结果分析失败
+2025-07-12 20:01:15,355 - INFO - extracter - 开始处理文件: playlist4.html
+2025-07-12 20:01:15,473 - INFO - extracter - 共找到 1000 首歌曲
+2025-07-12 20:05:44,747 - INFO - extracter - 歌曲处理完成，开始分析结果...
+2025-07-12 20:05:44,756 - ERROR - extracter - 结果分析失败: '艺人'
+2025-07-12 20:05:44,757 - ERROR - extracter - 结果分析失败
+2025-07-12 20:07:23,659 - INFO - extracter - 开始处理文件: playlist5.html
+2025-07-12 20:07:23,765 - INFO - extracter - 共找到 1000 首歌曲
+2025-07-12 20:11:59,289 - INFO - extracter - 歌曲处理完成，开始分析结果...
+2025-07-12 20:11:59,299 - ERROR - extracter - 结果分析失败: '艺人'
+2025-07-12 20:11:59,299 - ERROR - extracter - 结果分析失败
+2025-07-12 20:12:27,655 - INFO - extracter - 开始处理文件: playlist6.html
+2025-07-12 20:12:27,704 - INFO - extracter - 共找到 97 首歌曲
+2025-07-12 20:12:52,226 - INFO - extracter - 歌曲处理完成，开始分析结果...
+2025-07-12 20:12:52,231 - ERROR - extracter - 结果分析失败: '艺人'
+2025-07-12 20:12:52,232 - ERROR - extracter - 结果分析失败

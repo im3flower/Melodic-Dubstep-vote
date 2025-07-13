@@ -1,0 +1,45 @@
+2025-07-12 19:13:48,113 - INFO - extracter - 开始处理文件: playlist.html
+2025-07-12 19:13:48,173 - INFO - extracter - 共找到 1000 首歌曲
+2025-07-12 19:13:48,408 - WARNING - extracter - 网络错误 (SSLError) - 尝试 1/10
+2025-07-12 19:13:50,422 - WARNING - extracter - 网络错误 (SSLError) - 尝试 2/10
+2025-07-12 19:13:53,481 - WARNING - extracter - 网络错误 (SSLError) - 尝试 3/10
+2025-07-12 19:15:13,622 - INFO - extracter - 开始处理文件: playlist.html
+2025-07-12 19:15:13,682 - INFO - extracter - 共找到 1000 首歌曲
+2025-07-12 19:15:13,704 - INFO - extracter - 处理完成！分析结果...
+2025-07-12 19:15:13,707 - INFO - extracter - 处理完成! 成功获取 796/1000 首歌曲信息 (79.60%)
+2025-07-12 19:15:13,708 - INFO - extracter - 有 204 首歌曲失败，已保存到 failed_songs_retry.csv
+2025-07-12 19:15:13,708 - INFO - extracter - 开始重试失败歌曲...
+2025-07-12 19:15:13,949 - WARNING - extracter - 网络错误 (SSLError) - 尝试 1/10
+2025-07-12 19:15:15,767 - WARNING - extracter - 网络错误 (SSLError) - 尝试 2/10
+2025-07-12 19:15:25,002 - INFO - extracter - 开始处理文件: playlist.html
+2025-07-12 19:15:25,061 - INFO - extracter - 共找到 1000 首歌曲
+2025-07-12 19:15:25,081 - INFO - extracter - 处理完成！分析结果...
+2025-07-12 19:15:25,083 - INFO - extracter - 处理完成! 成功获取 796/1000 首歌曲信息 (79.60%)
+2025-07-12 19:15:25,085 - INFO - extracter - 有 204 首歌曲失败，已保存到 failed_songs_retry1.csv
+2025-07-12 19:15:25,085 - INFO - extracter - 开始重试失败歌曲...
+2025-07-12 19:15:25,173 - WARNING - extracter - 网络错误 (SSLError) - 尝试 1/10
+2025-07-12 19:15:26,757 - WARNING - extracter - 网络错误 (SSLError) - 尝试 2/10
+2025-07-12 19:15:30,290 - WARNING - extracter - 网络错误 (SSLError) - 尝试 3/10
+2025-07-12 19:15:36,767 - WARNING - extracter - 网络错误 (SSLError) - 尝试 4/10
+2025-07-12 19:15:49,002 - WARNING - extracter - 网络错误 (SSLError) - 尝试 5/10
+2025-07-12 19:16:13,217 - WARNING - extracter - 网络错误 (SSLError) - 尝试 6/10
+2025-07-12 19:16:53,933 - INFO - extracter - 开始处理文件: playlist.html
+2025-07-12 19:16:53,993 - INFO - extracter - 共找到 1000 首歌曲
+2025-07-12 19:16:54,015 - INFO - extracter - 处理完成！分析结果...
+2025-07-12 19:16:54,017 - INFO - extracter - 处理完成! 成功获取 796/1000 首歌曲信息 (79.60%)
+2025-07-12 19:16:54,018 - INFO - extracter - 有 204 首歌曲失败，已保存到 failed_songs_retry1.csv
+2025-07-12 19:16:54,018 - INFO - extracter - 开始重试失败歌曲...
+2025-07-12 19:16:54,110 - WARNING - extracter - 网络错误 (SSLError) - 尝试 1/10
+2025-07-12 19:16:55,721 - WARNING - extracter - 网络错误 (SSLError) - 尝试 2/10
+2025-07-12 19:16:59,051 - WARNING - extracter - 网络错误 (SSLError) - 尝试 3/10
+2025-07-12 19:17:05,188 - WARNING - extracter - 网络错误 (SSLError) - 尝试 4/10
+2025-07-12 19:17:17,682 - WARNING - extracter - 网络错误 (SSLError) - 尝试 5/10
+2025-07-12 19:17:41,700 - WARNING - extracter - 网络错误 (SSLError) - 尝试 6/10
+2025-07-12 19:18:17,807 - INFO - extracter - 开始处理文件: playlist.html
+2025-07-12 19:18:17,868 - INFO - extracter - 共找到 1000 首歌曲
+2025-07-12 19:18:17,889 - INFO - extracter - 处理完成！分析结果...
+2025-07-12 19:18:17,891 - INFO - extracter - 处理完成! 成功获取 796/1000 首歌曲信息 (79.60%)
+2025-07-12 19:18:17,893 - INFO - extracter - 有 204 首歌曲失败，已保存到 failed_songs_retry1.csv
+2025-07-12 19:18:17,893 - INFO - extracter - 开始重试失败歌曲...
+2025-07-12 19:18:17,982 - WARNING - extracter - 网络错误 (SSLError) - 尝试 1/10
+2025-07-12 19:18:19,696 - WARNING - extracter - 网络错误 (SSLError) - 尝试 2/10
