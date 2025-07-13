@@ -1,1 +1,1 @@
-a vote for best melodic dubstep songs
+a website for best Chinese melodic dubstep & bass listeners
