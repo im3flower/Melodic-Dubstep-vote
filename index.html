@@ -6,7 +6,219 @@
     <title>Ophelia China Family官网 & Melodic Dubstep中文交流网站</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    
     <style>
+
+        .main-hidden { 
+            display: none !important;
+        }
+
+        .form-section {
+            flex: 1;
+            padding: 50px 40px;
+            position: relative;
+        }
+        
+        .form-container {
+            width: 100%;
+        }
+        
+        .form-title {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #333;
+        }
+        
+        .form-title h2 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        
+        .form-title p {
+            color: #666;
+            font-size: 16px;
+        }
+        
+        .form-group {
+            margin-bottom: 25px;
+            position: relative;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #555;
+        }
+        
+        .input-with-icon {
+            position: relative;
+        }
+        
+        .input-with-icon i {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #777;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 15px 15px 15px 45px;
+            border: 2px solid #e1e1e1;
+            border-radius: 10px;
+            font-size: 16px;
+            transition: all 0.3s;
+        }
+        
+        .form-control:focus {
+            border-color: #2575fc;
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(37, 117, 252, 0.2);
+        }
+        
+        .password-toggle {
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            color: #777;
+            cursor: pointer;
+        }
+        
+        .btn {
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-radius: 10px;
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            color: white;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin-top: 10px;
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(37, 117, 252, 0.4);
+        }
+        
+        .social-login {
+            text-align: center;
+            margin: 30px 0;
+        }
+        
+        .social-login p {
+            color: #666;
+            margin-bottom: 15px;
+            position: relative;
+        }
+        
+        .social-login p::before,
+        .social-login p::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            width: 30%;
+            height: 1px;
+            background: #e1e1e1;
+        }
+        
+        .social-login p::before {
+            left: 0;
+        }
+        
+        .social-login p::after {
+            right: 0;
+        }
+        
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        
+        .social-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .social-icon.facebook {
+            background-color: #3b5998;
+        }
+        
+        .social-icon.google {
+            background-color: #dd4b39;
+        }
+        
+        .social-icon.twitter {
+            background-color: #1da1f2;
+        }
+        
+        .social-icon:hover {
+            transform: translateY(-5px);
+        }
+        
+        .switch-form {
+            text-align: center;
+            margin-top: 20px;
+            color: #666;
+        }
+        
+        .switch-form a {
+            color: #2575fc;
+            text-decoration: none;
+            font-weight: 600;
+            cursor: pointer;
+        }
+        
+        .switch-form a:hover {
+            text-decoration: underline;
+        }
+        
+        .error-message {
+            color: #e74c3c;
+            font-size: 14px;
+            margin-top: 8px;
+            display: none;
+        }
+        
+        .success-message {
+            color: #2ecc71;
+            font-size: 14px;
+            margin-top: 8px;
+            display: none;
+        }
+        
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+            
+            .welcome-section {
+                padding: 30px 20px;
+            }
+            
+            .form-section {
+                padding: 30px 25px;
+            }
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -150,7 +362,6 @@
             color: var(--secondary);
             margin-bottom: 20px;
             font-size: 2.2rem;
-            animation: fadeInUp 1s forwards 0.5s;
         }
 
         .intro h2 {
@@ -560,424 +771,759 @@
     </style>
 </head>
 <body>
-    
-    <nav class="navbar">
-        <a href="#" class="logo">
-            <img src="Ophelia_records_China_family.jpg" alt="Ophelia Records China Family Logo" style="height: 100px; margin-right: 10px;">
-            Ophelia China Family
-        </a>
-        
-        <ul class="nav-links">
-            <li><a href="#home" class="active">首页</a></li>
-            <li><a href="#songstore">Melodic Dubstep曲库收集</a></li>
-            <li><a href="#activities">活动</a></li>
-            <li><a href="#join">加入我们</a></li>
-            <li><a href="#about">关于</a></li>
-        </ul>
-        
-    </nav>
 
-    <script>
-        
-        document.addEventListener('DOMContentLoaded', function() {
-            const navbar = document.querySelector('.navbar');
-            const navLinks = document.querySelector('.nav-links');
-            const sections = document.querySelectorAll('.page-section');
-            const navAnchors = document.querySelectorAll('.nav-links a');
+    
+
+
+    
+
+    <div class="main" id="main">
+
+        <nav class="navbar">
             
+            <a href="#" class="logo">
+                <img src="Ophelia_records_China_family.jpg" alt="Ophelia Records China Family Logo" style="height: 100px; margin-right: 10px;">
+                Ophelia China Family
+            </a>
+
+        </nav>
+
+
+        <nav class="navbar" id="nav-links">
+
+            <a href="#" class="logo">
+                <img src="Ophelia_records_China_family.jpg" alt="Ophelia Records China Family Logo" style="height: 100px; margin-right: 10px;">
+                Ophelia China Family
+            </a>
             
-            window.addEventListener('scroll', () => {
-                if (window.scrollY > 50) {
-                    navbar.classList.add('scrolled');
-                } else {
-                    navbar.classList.remove('scrolled');
-                }
+
+            <ul class="nav-links">
+                <li><a href="#home" class="active">首页</a></li>
+                <li><a href="#songstore">Melodic Dubstep曲库收集</a></li>
+                <li><a href="#activities">活动</a></li>
+                <li><a href="#join">加入我们</a></li>
+                <li><a href="#about">关于</a></li>
+            </ul>
+            
+        </nav>
+
+        <script>
+            
+            document.addEventListener('DOMContentLoaded', function() {
+                const navbar = document.querySelector('.navbar');
+                const navLinks = document.querySelector('.nav-links');
+                const sections = document.querySelectorAll('.page-section');
+                const navAnchors = document.querySelectorAll('.nav-links a');
                 
-                updateActiveNav();
-            });
-            
-            navAnchors.forEach(anchor => {
-                anchor.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    
-                    const targetId = this.getAttribute('href');
-                    
-                    navAnchors.forEach(a => a.classList.remove('active'));
-                    
-                    this.classList.add('active');
-                    
-                    sections.forEach(section => {
-                        section.classList.remove('active');
-                    });
-                    
-                    const targetSection = document.querySelector(targetId);
-                    if (targetSection) {
-                        targetSection.classList.add('active');
-                        
-                        window.scrollTo({
-                            top: targetSection.offsetTop - (navbar.classList.contains('scrolled') ? 60 : 80),
-                            behavior: 'smooth'
-                        });
-                    }
-                    
-                    if (navLinks.classList.contains('open')) {
-                        navLinks.classList.remove('open');
-                    }
-                });
-            });
-            
-            document.querySelector('#home').classList.add('active');
-            
-            function updateActiveNav() {
-                let current = '';
                 
-                sections.forEach(section => {
-                    const sectionTop = section.offsetTop;
-                    const sectionHeight = section.offsetHeight;
-                    
-                    if (window.scrollY >= (sectionTop - 100) && 
-                        window.scrollY < (sectionTop + sectionHeight - 100)) {
-                        current = section.getAttribute('id');
+                window.addEventListener('scroll', () => {
+                    if (window.scrollY > 50) {
+                        navbar.classList.add('scrolled');
+                    } else {
+                        navbar.classList.remove('scrolled');
                     }
+                    
+                    updateActiveNav();
                 });
                 
                 navAnchors.forEach(anchor => {
-                    anchor.classList.remove('active');
-                    if (anchor.getAttribute('href') === `#${current}`) {
-                        anchor.classList.add('active');
+                    anchor.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        
+                        const targetId = this.getAttribute('href');
+                        
+                        navAnchors.forEach(a => a.classList.remove('active'));
+                        
+                        this.classList.add('active');
+                        
+                        sections.forEach(section => {
+                            section.classList.remove('active');
+                        });
+                        
+                        const targetSection = document.querySelector(targetId);
+                        if (targetSection) {
+                            targetSection.classList.add('active');
+                            
+                            window.scrollTo({
+                                top: targetSection.offsetTop - (navbar.classList.contains('scrolled') ? 60 : 80),
+                                behavior: 'smooth'
+                            });
+                        }
+                        
+                        if (navLinks.classList.contains('open')) {
+                            navLinks.classList.remove('open');
+                        }
+                    });
+                });
+                
+                document.querySelector('#home').classList.add('active');
+                
+                function updateActiveNav() {
+                    let current = '';
+                    
+                    sections.forEach(section => {
+                        const sectionTop = section.offsetTop;
+                        const sectionHeight = section.offsetHeight;
+                        
+                        if (window.scrollY >= (sectionTop - 100) && 
+                            window.scrollY < (sectionTop + sectionHeight - 100)) {
+                            current = section.getAttribute('id');
+                        }
+                    });
+                    
+                    navAnchors.forEach(anchor => {
+                        anchor.classList.remove('active');
+                        if (anchor.getAttribute('href') === `#${current}`) {
+                            anchor.classList.add('active');
+                        }
+                    });
+                }
+                
+                if (window.location.hash) {
+                    const targetSection = document.querySelector(window.location.hash);
+                    if (targetSection) {
+
+                        sections.forEach(section => section.classList.remove('active'));
+                        navAnchors.forEach(anchor => anchor.classList.remove('active'));
+                        
+                        
+                        targetSection.classList.add('active');
+                        document.querySelector(`.nav-links a[href="${window.location.hash}"]`).classList.add('active');
+                        
+                        setTimeout(() => {
+                            window.scrollTo({
+                                top: targetSection.offsetTop - (navbar.classList.contains('scrolled') ? 60 : 80),
+                                behavior: 'instant'
+                            });
+                        }, 100);
                     }
+                }
+            })
+        </script>
+
+
+        <section id="home">
+
+            <div class="particles" id="particles"></div>
+            <h1 class="logo">MELODIC DUBSTEP</h1>
+            <p class="subtitle">融合情感旋律与强力低音的电子音乐</p>
+            
+            <div class="intro">
+                <h2>探索旋律回响的魅力</h2>
+                <p>Melodic Dubstep是一种融合了Dubstep的强力低音和电子旋律元素的音乐流派。它诞生于2010年代初，作为对传统Dubstep的旋律化演变，在EDM场景中迅速赢得了大量追随者。</p>
+                <p>这种风格的特点在于将情感丰富的旋律、宏大的合成器铺底与Dubstep标志性的wobble bass和鼓点节奏完美结合，创造出既震撼人心又富有情感深度的音乐体验。</p>
+                <p>代表艺术家包括Seven Lions、Illenium、MitiS、Au5和Crystal Skies等，他们通过独特的制作技巧将这一流派推向了新的高度。现在在新一代人的创新与学习中又焕发出新的生机。</p>
+            </div>
+
+        </section>
+
+        <section id="songstore">
+            <div class="section-header">
+                <h2><i class="fas fa-music"></i> Melodic Dubstep曲库</h2>
+                <p>歌曲筛选可行度过低，所以曲库不一定全也不一定都是Melodic Dubstep风格，请大家谅解</p>
+                <p>如果缺少你喜欢的歌，可以微信私信我！（微信号见“关于”）</p>
+            </div>
+            
+            <div class="search-container">
+                <input type="text" id="songSearch" class="search-input" placeholder="搜索歌曲、艺术家...">
+                <button id="searchBtn" class="search-btn">
+                    <i class="fas fa-search"></i> 搜索
+                </button>
+            </div>
+            
+            <div class="table-container">
+                <div class="loader" id="loader">
+                    <i class="fas fa-spinner"></i>
+                    <p>正在加载歌曲数据...</p>
+                </div>
+                
+                <table class="song-table" id="songTable" style="display: none;">
+                    <thead>
+                        <tr>
+                            <th data-sort="id">歌曲 ID</th>
+                            <th data-sort="title">歌曲名</th>
+                            <th data-sort="artist">艺术家</th>
+                        </tr>
+                    </thead>
+                    <tbody id="songTableBody">
+                        
+                    </tbody>
+                </table>
+                
+                <div id="noResults" class="no-results" style="display: none;">
+                    <i class="fas fa-search"></i>
+                    <p>没有找到匹配的歌曲</p>
+                    <p>请尝试其他搜索关键词</p>
+                </div>
+            </div>
+            
+            <div class="stats" id="songStats" style="display: none;">
+                显示 <span id="visibleCount">0</span> 首歌曲，共 <span id="totalCount">0</span> 首
+            </div>
+        </section>
+
+
+
+        <section id="activities">
+            <h2>
+                前面的区域以后再来探索吧~
+            </h2>
+            <p></p>
+        </section>
+
+        
+
+        <section id="join">
+            <h3>
+                Ophelia China Family微信二群二维码（不知道现在有没有二群反正啥时候有码了再放，欢迎各位加入）
+            </h3>
+            <p></p>
+        </section>
+
+            
+        
+        <section id="about">
+            <h1>网站作者：3flower</h1>
+            <h1>微信号：Calvin_wyc</h1>
+            <h1>曲库来自Fadinglight-_-、趋光者lightfighter等人的歌单，已经过趋光者lightfighter同意</h1>
+            <h1>想在网站上宣传活动的朋友都可以私信我，只要活动好我会在网站上宣传，不要q</h1>
+            <h1>此网站纯免费，会不定期搞出来一些新投票活动交流评论活动之类的</h1>
+        </section>
+
+
+
+
+        <script>
+            
+            document.addEventListener('DOMContentLoaded', function() {
+                
+                const CSV_PATH = 'https://raw.githubusercontent.com/im3flower/Ophelia-China-Family/main/songlist.csv'
+                
+                
+                let songs = []
+                let currentSort = { column: null, direction: 1 }
+                
+                
+                const loader = document.getElementById('loader')
+                const songTable = document.getElementById('songTable')
+                const songTableBody = document.getElementById('songTableBody')
+                const noResults = document.getElementById('noResults')
+                const songStats = document.getElementById('songStats')
+                const visibleCount = document.getElementById('visibleCount')
+                const totalCount = document.getElementById('totalCount')
+                const searchInput = document.getElementById('songSearch')
+                const searchBtn = document.getElementById('searchBtn')
+                const sortHeaders = document.querySelectorAll('.song-table th[data-sort]')
+                
+                loadCSVData();
+                
+                searchBtn.addEventListener('click', filterSongs);
+                
+                searchInput.addEventListener('keyup', function(e) {
+                    if (e.key === 'Enter') {
+                        filterSongs();
+                    }
+                });
+                
+                
+                sortHeaders.forEach(th => {
+                    th.addEventListener('click', function() {
+                        const column = this.getAttribute('data-sort');
+                        sortSongs(column);
+                    });    
+                });
+                
+                async function loadCSVData() {
+                const MAX_RETRIES = 5;
+                const RETRY_DELAY = 2000; 
+                
+                for (let attempt = 1; attempt <= MAX_RETRIES; attempt++) {
+                    try {
+                    const timestamp = new Date().getTime();
+                    const response = await fetch(`${CSV_PATH}?t=${timestamp}`);
+                    
+                    if (!response.ok) {
+                        throw new Error(`HTTP 错误! 状态码: ${response.status}`);
+                    }
+                    
+                    const csvData = await response.text();
+                    parseCSV(csvData);
+                    return
+                    } catch (error) {
+                    console.error(`尝试 ${attempt} 失败:`, error);
+                    
+                    if (attempt === MAX_RETRIES) {
+                        loader.innerHTML = `
+                        <i class="fas fa-exclamation-triangle"></i>
+                        <p>加载失败，请刷新页面重试</p>
+                        <p><small>${error.message}</small></p>
+                        <button id="retryBtn" style="margin-top:15px;padding:8px 20px;background:#4e9af1;border:none;border-radius:4px;color:white;cursor:pointer;">重试</button>
+                        `;
+                        
+                        document.getElementById('retryBtn').addEventListener('click', loadCSVData);
+                    } else {
+                        
+                        await new Promise(resolve => setTimeout(resolve, RETRY_DELAY));
+                    }
+                    }
+                }
+                }
+
+                function parseCSV(csv) {
+                    const lines = csv.split('\n');
+                    const headers = lines[0].split(',').map(h => h.trim());
+                    
+                    if (!headers.includes('song id') || !headers.includes('歌曲名') || !headers.includes('艺术家')) {
+                        loader.innerHTML = `
+                            <i class="fas fa-exclamation-triangle"></i>
+                            <p>CSV格式不正确</p>
+                            <p style="margin-top:10px;">需要的列: song id, 歌曲名, 艺术家</p>
+                        `;
+                        return;
+                    }
+                    
+                    
+                    songs = [];
+                    for (let i = 1; i < lines.length; i++) {
+                        const line = lines[i].trim();
+                        if (!line) continue;
+                        
+                        const values = line.split(',').map(v => v.trim());
+                        if (values.length >= 3) {
+                            songs.push({
+                                id: values[0],
+                                title: values[1],
+                                artist: values[2]
+                            });
+                        }
+                    }
+                    
+                    renderTable(songs);
+                    updateStats(songs.length, songs.length);
+                }
+                
+                function renderTable(data) {
+
+                    loader.style.display = 'none';
+                    
+                    if (data.length === 0) {
+                        noResults.style.display = 'block';
+                        songTable.style.display = 'none';
+                        songStats.style.display = 'none';
+                        return;
+                    }
+                    
+                    noResults.style.display = 'none';
+                    songTable.style.display = 'table';
+                    songStats.style.display = 'block';
+                    
+                    songTableBody.innerHTML = '';
+                    
+                    data.forEach(song => {
+                        const row = document.createElement('tr');
+                        
+                        const idCell = document.createElement('td');
+                        idCell.className = 'song-id';
+                        idCell.textContent = song.id;
+                        row.appendChild(idCell);
+                        
+                        const titleCell = document.createElement('td');
+                        titleCell.innerHTML = `
+                            <div class="song-title">${song.title}</div>
+                        `;
+                        row.appendChild(titleCell);
+                        
+                        const artistCell = document.createElement('td');
+                        artistCell.innerHTML = `
+                            <div class="song-artist">${song.artist}</div>
+                        `;
+                        row.appendChild(artistCell);
+                        
+                        songTableBody.appendChild(row);
+                    });
+                    
+                    updateStats(data.length, songs.length);
+                }
+                
+                function updateStats(visible, total) {
+                    visibleCount.textContent = visible;
+                    totalCount.textContent = total;
+                }
+                
+                function filterSongs() {
+                    const searchTerm = searchInput.value.toLowerCase().trim();
+                    
+                    if (!searchTerm) {
+                        renderTable(songs);
+                        return;
+                    }
+                    
+                    const filteredSongs = songs.filter(song => {
+                        return (
+                            (song.id && song.id.toLowerCase().includes(searchTerm)) ||
+                            (song.title && song.title.toLowerCase().includes(searchTerm)) ||
+                            (song.artist && song.artist.toLowerCase().includes(searchTerm))
+                        );
+                    });
+                    
+                    renderTable(filteredSongs);
+                }
+                
+                function sortSongs(column) {
+
+                    if (currentSort.column === column) {
+                        currentSort.direction = currentSort.direction * -1;
+                    } else {
+                        currentSort.column = column;
+                        currentSort.direction = 1;
+                    }
+                    
+                    sortHeaders.forEach(th => {
+                        th.classList.remove('sorted-asc', 'sorted-desc');
+                    });
+                    
+                    const currentHeader = document.querySelector(`th[data-sort="${column}"]`);
+                    currentHeader.classList.add(currentSort.direction === 1 ? 'sorted-asc' : 'sorted-desc');
+                    
+                    const sortedSongs = [...songs].sort((a, b) => {
+                        let valueA = a[column] || '';
+                        let valueB = b[column] || '';
+                        
+                        if (column === 'id') {
+                            const numA = parseInt(valueA, 10);
+                            const numB = parseInt(valueB, 10);
+                            
+                            if (!isNaN(numA) && !isNaN(numB)) {
+                                return (numA - numB) * currentSort.direction;
+                            }
+                        }
+                        
+                        return valueA.localeCompare(valueB) * currentSort.direction;
+                    });
+                    
+                    renderTable(sortedSongs);
+                }
+            });
+
+        </script>
+
+    </div>
+
+
+    <script>
+
+        const main = document.getElementById('main')
+
+
+        let logined = false
+        main.classList.add('main-hidden')
+
+        document.addEventListener('DOMContentLoaded', function() {
+
+            const switchToRegister = document.getElementById('switchToRegister')
+            const formTitle = document.getElementById('formTitle')
+            const loginForm = document.getElementById('loginForm')
+            
+            const registerForm = document.createElement('form')
+            registerForm.id = 'registerForm'
+            registerForm.style.display = 'none'
+            registerForm.innerHTML = `
+                <div class="form-group">
+                    <label for="registerName">用户名</label>
+                    <div class="input-with-icon">
+                        <i class="fas fa-user"></i>
+                        <input type="text" id="registerName" class="form-control" placeholder="输入您的用户名" required>
+                    </div>
+                    <div class="error-message" id="registerNameError">用户名不能为空</div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="registerEmail">电子邮箱</label>
+                    <div class="input-with-icon">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" id="registerEmail" class="form-control" placeholder="输入您的电子邮箱" required>
+                    </div>
+                    <div class="error-message" id="registerEmailError">请输入有效的电子邮箱地址</div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="registerPassword">密码</label>
+                    <div class="input-with-icon">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" id="registerPassword" class="form-control" placeholder="创建密码" required>
+                        <button type="button" class="password-toggle" id="registerPasswordToggle">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                    <div class="error-message" id="registerPasswordError">密码至少需要6个字符</div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="registerConfirmPassword">确认密码</label>
+                    <div class="input-with-icon">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" id="registerConfirmPassword" class="form-control" placeholder="确认密码" required>
+                    </div>
+                    <div class="error-message" id="registerConfirmPasswordError">两次输入的密码不一致</div>
+                </div>
+                
+                <div class="form-group">
+                    <button type="submit" class="btn">注册账户</button>
+                    <div class="success-message" id="registerSuccess">注册成功！正在重定向...</div>
+                    <div class="error-message" id="registerError">此电子邮箱已被注册</div>
+                </div>
+            `;
+            
+
+            loginForm.parentNode.insertBefore(registerForm, loginForm.nextSibling);
+            
+            switchToRegister.addEventListener('click', function() {
+                loginForm.style.display = 'none'
+                registerForm.style.display = 'block'
+                formTitle.innerHTML = `
+                    <h2>创建账户</h2>
+                    <p>填写以下信息以注册新账户</p>
+                `;
+                this.parentNode.innerHTML = '<p>已有账户? <a id="switchToLogin">立即登录</a></p>';
+                
+                document.getElementById('switchToLogin').addEventListener('click', function() {
+                    loginForm.style.display = 'block'
+                    registerForm.style.display = 'none'
+                    formTitle.innerHTML = `
+                        <h2>登录账户</h2>
+                        <p>请输入您的凭据以继续</p>
+                    `
+                    this.parentNode.innerHTML = '<p>还没有账户? <a id="switchToRegister">立即注册</a></p>'
+                    
+                    document.getElementById('switchToRegister').addEventListener('click', arguments.callee)
+                })
+            })
+            
+            function setupPasswordToggle(inputId, toggleId) {
+                const passwordInput = document.getElementById(inputId);
+                const passwordToggle = document.getElementById(toggleId);
+                
+                passwordToggle.addEventListener('click', function() {
+                    const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+                    passwordInput.setAttribute('type', type);
+                    this.innerHTML = type === 'password' ? '<i class="fas fa-eye"></i>' : '<i class="fas fa-eye-slash"></i>';
                 });
             }
             
-            if (window.location.hash) {
-                const targetSection = document.querySelector(window.location.hash);
-                if (targetSection) {
-
-                    sections.forEach(section => section.classList.remove('active'));
-                    navAnchors.forEach(anchor => anchor.classList.remove('active'));
-                    
-                    
-                    targetSection.classList.add('active');
-                    document.querySelector(`.nav-links a[href="${window.location.hash}"]`).classList.add('active');
-                    
-                    setTimeout(() => {
-                        window.scrollTo({
-                            top: targetSection.offsetTop - (navbar.classList.contains('scrolled') ? 60 : 80),
-                            behavior: 'instant'
-                        });
-                    }, 100);
+            setupPasswordToggle('loginPassword', 'loginPasswordToggle');
+            setupPasswordToggle('registerPassword', 'registerPasswordToggle');
+            
+            
+            loginForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                let valid = true;
+                
+                const email = document.getElementById('loginEmail').value;
+                if (!validateEmail(email)) {
+                    document.getElementById('loginEmailError').style.display = 'block';
+                    valid = false;
+                } else {
+                    document.getElementById('loginEmailError').style.display = 'none';
                 }
+                
+                const password = document.getElementById('loginPassword').value;
+                if (password.length < 6) {
+                    document.getElementById('loginPasswordError').style.display = 'block';
+                    valid = false;
+                } else {
+                    document.getElementById('loginPasswordError').style.display = 'none';
+                }
+                
+                if (valid) {
+
+                    if (authenticateUser(email, password)) {
+
+                        document.getElementById('login').style.display = 'none'
+                        
+                        main.classList.remove('main-hidden')
+
+
+                        document.getElementById('loginSuccess').style.display = 'block'
+                        document.getElementById('loginError').style.display = 'none'
+
+
+                        
+                        setTimeout(() => {
+                            alert('登录成功！欢迎回来。');
+                        }, 1500);
+                    } else {
+                        document.getElementById('loginError').style.display = 'block'
+                    }
+                }
+            });
+            
+
+            registerForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                let valid = true
+                
+                const name = document.getElementById('registerName').value
+                if (name.trim() === '') {
+                    document.getElementById('registerNameError').style.display = 'block'
+                    valid = false
+                } else {
+                    document.getElementById('registerNameError').style.display = 'none'
+                }
+                
+                const email = document.getElementById('registerEmail').value
+                if (!validateEmail(email)) {
+                    document.getElementById('registerEmailError').style.display = 'block'
+                    valid = false
+                } else {
+                    document.getElementById('registerEmailError').style.display = 'none'
+                }
+                
+                const password = document.getElementById('registerPassword').value
+                if (password.length < 6) {
+                    document.getElementById('registerPasswordError').style.display = 'block'
+                    valid = false
+                } else {
+                    document.getElementById('registerPasswordError').style.display = 'none'
+                }
+                
+                const confirmPassword = document.getElementById('registerConfirmPassword').value
+                if (password !== confirmPassword) {
+                    document.getElementById('registerConfirmPasswordError').style.display = 'block'
+                    valid = false
+                } else {
+                    document.getElementById('registerConfirmPasswordError').style.display = 'none'
+                }
+                
+                if (valid) {
+                    
+                    if (registerUser(name, email, password)) {
+                        
+                        document.getElementById('main').style.display = 'block'
+
+                        document.getElementById('registerSuccess').style.display = 'block'
+                        document.getElementById('registerError').style.display = 'none'
+                        
+                        setTimeout(() => {
+                            alert('注册成功！欢迎加入我们。')
+                        }, 1500)
+                    } else {
+                        document.getElementById('registerError').style.display = 'block'
+                    }
+                }
+            })
+            
+            function validateEmail(email) {
+                const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+                return re.test(String(email).toLowerCase())
+            }
+            
+            function authenticateUser(email, password) {
+
+                const users = JSON.parse(localStorage.getItem('users')) || []
+                const user = users.find(u => u.email === email && u.password === password)
+                return user !== undefined
+            }
+            
+            function registerUser(name, email, password) {
+
+                const users = JSON.parse(localStorage.getItem('users')) || []
+                const userExists = users.some(u => u.email === email)
+                
+                if (userExists) {
+                    return false
+                }
+                
+                users.push({
+                    name: name,
+                    email: email,
+                    password: password
+                })
+                
+                localStorage.setItem('users', JSON.stringify(users))
+
+                main.classList.remove('main-hidden');
+                
+                document.getElementById('login').style.display = 'none'
+                
+
+
+                document.getElementById('loginSuccess').style.display = 'block'
+                document.getElementById('loginError').style.display = 'none'
+                
+                
+                
+
+                
+                return true
             }
         })
     </script>
 
 
-    <section id="home">
-
-        <div class="particles" id="particles"></div>
-        <h1 class="logo">MELODIC DUBSTEP</h1>
-        <p class="subtitle">融合情感旋律与强力低音的电子音乐</p>
-        
-        <div class="intro">
-            <h2>探索旋律回响的魅力</h2>
-            <p>Melodic Dubstep是一种融合了Dubstep的强力低音和电子旋律元素的音乐流派。它诞生于2010年代初，作为对传统Dubstep的旋律化演变，在EDM场景中迅速赢得了大量追随者。</p>
-            <p>这种风格的特点在于将情感丰富的旋律、宏大的合成器铺底与Dubstep标志性的wobble bass和鼓点节奏完美结合，创造出既震撼人心又富有情感深度的音乐体验。</p>
-            <p>代表艺术家包括Seven Lions、Illenium、MitiS、Au5和Crystal Skies等，他们通过独特的制作技巧将这一流派推向了新的高度。现在在新一代人的创新与学习中又焕发出新的生机。</p>
-        </div>
-
-    </section>
-
-    <section id="songstore">
-        <div class="section-header">
-            <h2><i class="fas fa-music"></i> Melodic Dubstep曲库</h2>
-            <p>歌曲筛选可行度过低，所以曲库不一定全也不一定都是Melodic Dubstep风格，请大家谅解</p>
-            <p>如果缺少你喜欢的歌，可以微信私信我！（微信号见“关于”）</p>
-        </div>
-        
-        <div class="search-container">
-            <input type="text" id="songSearch" class="search-input" placeholder="搜索歌曲、艺术家...">
-            <button id="searchBtn" class="search-btn">
-                <i class="fas fa-search"></i> 搜索
-            </button>
-        </div>
-        
-        <div class="table-container">
-            <div class="loader" id="loader">
-                <i class="fas fa-spinner"></i>
-                <p>正在加载歌曲数据...</p>
-            </div>
-            
-            <table class="song-table" id="songTable" style="display: none;">
-                <thead>
-                    <tr>
-                        <th data-sort="id">歌曲 ID</th>
-                        <th data-sort="title">歌曲名</th>
-                        <th data-sort="artist">艺术家</th>
-                    </tr>
-                </thead>
-                <tbody id="songTableBody">
-                    
-                </tbody>
-            </table>
-            
-            <div id="noResults" class="no-results" style="display: none;">
-                <i class="fas fa-search"></i>
-                <p>没有找到匹配的歌曲</p>
-                <p>请尝试其他搜索关键词</p>
-            </div>
-        </div>
-        
-        <div class="stats" id="songStats" style="display: none;">
-            显示 <span id="visibleCount">0</span> 首歌曲，共 <span id="totalCount">0</span> 首
-        </div>
-    </section>
-
-
-
-    <section id="activities">
-        <h2>
-            前面的区域以后再来探索吧~
-        </h2>
-        <p></p>
-    </section>
-
     
+    <section id="login">
 
-    <section id="join">
-        <h3>
-            Ophelia China Family微信二群二维码（不知道现在有没有二群反正啥时候有码了再放，欢迎各位加入）
-        </h3>
-        <p></p>
+        <div class="form-section">
+            <div class="form-container">
+                <div class="form-title" id="formTitle">
+                    <h2>登录账户</h2>
+                    <p>请输入您的凭据以继续</p>
+                </div>
+                
+                <form id="loginForm">
+                    <div class="form-group">
+                        <label for="loginEmail">电子邮箱</label>
+                        <div class="input-with-icon">
+                            <i class="fas fa-envelope"></i>
+                            <input type="email" id="loginEmail" class="form-control" placeholder="输入您的电子邮箱" required>
+                        </div>
+                        <div class="error-message" id="loginEmailError">请输入有效的电子邮箱地址</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="loginPassword">密码</label>
+                        <div class="input-with-icon">
+                            <i class="fas fa-lock"></i>
+                            <input type="password" id="loginPassword" class="form-control" placeholder="输入您的密码" required>
+                            <button type="button" class="password-toggle" id="loginPasswordToggle">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                        </div>
+                        <div class="error-message" id="loginPasswordError">密码不能为空</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <button type="submit" class="btn">登录</button>
+                        <div class="success-message" id="loginSuccess">登录成功！正在重定向...</div>
+                        <div class="error-message" id="loginError">电子邮箱或密码不正确</div>
+                    </div>
+                </form>
+                
+                <div class="social-login">
+                    <p>或使用其他方式登录</p>
+                    <div class="social-icons">
+                        <div class="social-icon facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </div>
+                        <div class="social-icon google">
+                            <i class="fab fa-google"></i>
+                        </div>
+                        <div class="social-icon twitter">
+                            <i class="fab fa-twitter"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="switch-form">
+                    <p>还没有账户? <a id="switchToRegister">立即注册</a></p>
+                </div>
+            </div>
+        </div>
     </section>
 
-        
-    
-    <section id="about">
-        <h1>网站作者：3flower</h1>
-        <h1>微信号：Calvin_wyc</h1>
-        <h1>曲库来自Fadinglight-_-、趋光者lightfighter等人的歌单，已经过趋光者lightfighter同意</h1>
-        <h1>想在网站上宣传活动的朋友都可以私信我，只要活动好我会在网站上宣传，不要q</h1>
-        <h1>此网站纯免费，会不定期搞出来一些新投票活动交流评论活动之类的</h1>
-    </section>
 
 
 
-
-
-
-    <script>
-        
-        document.addEventListener('DOMContentLoaded', function() {
-            
-            const CSV_PATH = 'https://raw.githubusercontent.com/im3flower/Ophelia-China-Family/main/songlist.csv'
-            
-            
-            let songs = []
-            let currentSort = { column: null, direction: 1 }
-            
-            
-            const loader = document.getElementById('loader')
-            const songTable = document.getElementById('songTable')
-            const songTableBody = document.getElementById('songTableBody')
-            const noResults = document.getElementById('noResults')
-            const songStats = document.getElementById('songStats')
-            const visibleCount = document.getElementById('visibleCount')
-            const totalCount = document.getElementById('totalCount')
-            const searchInput = document.getElementById('songSearch')
-            const searchBtn = document.getElementById('searchBtn')
-            const sortHeaders = document.querySelectorAll('.song-table th[data-sort]')
-            
-            loadCSVData();
-            
-            searchBtn.addEventListener('click', filterSongs);
-            
-            searchInput.addEventListener('keyup', function(e) {
-                if (e.key === 'Enter') {
-                    filterSongs();
-                }
-            });
-            
-            
-            sortHeaders.forEach(th => {
-                th.addEventListener('click', function() {
-                    const column = this.getAttribute('data-sort');
-                    sortSongs(column);
-                });    
-            });
-            
-            async function loadCSVData() {
-              const MAX_RETRIES = 5;
-              const RETRY_DELAY = 2000; 
-              
-              for (let attempt = 1; attempt <= MAX_RETRIES; attempt++) {
-                try {
-                  const timestamp = new Date().getTime();
-                  const response = await fetch(`${CSV_PATH}?t=${timestamp}`);
-                  
-                  if (!response.ok) {
-                    throw new Error(`HTTP 错误! 状态码: ${response.status}`);
-                  }
-                  
-                  const csvData = await response.text();
-                  parseCSV(csvData);
-                  return
-                } catch (error) {
-                  console.error(`尝试 ${attempt} 失败:`, error);
-                  
-                  if (attempt === MAX_RETRIES) {
-                    loader.innerHTML = `
-                      <i class="fas fa-exclamation-triangle"></i>
-                      <p>加载失败，请刷新页面重试</p>
-                      <p><small>${error.message}</small></p>
-                      <button id="retryBtn" style="margin-top:15px;padding:8px 20px;background:#4e9af1;border:none;border-radius:4px;color:white;cursor:pointer;">重试</button>
-                    `;
-                    
-                    document.getElementById('retryBtn').addEventListener('click', loadCSVData);
-                  } else {
-                      
-                    await new Promise(resolve => setTimeout(resolve, RETRY_DELAY));
-                  }
-                }
-              }
-            }
-
-            function parseCSV(csv) {
-                const lines = csv.split('\n');
-                const headers = lines[0].split(',').map(h => h.trim());
-                
-                if (!headers.includes('song id') || !headers.includes('歌曲名') || !headers.includes('艺术家')) {
-                    loader.innerHTML = `
-                        <i class="fas fa-exclamation-triangle"></i>
-                        <p>CSV格式不正确</p>
-                        <p style="margin-top:10px;">需要的列: song id, 歌曲名, 艺术家</p>
-                    `;
-                    return;
-                }
-                
-                
-                songs = [];
-                for (let i = 1; i < lines.length; i++) {
-                    const line = lines[i].trim();
-                    if (!line) continue;
-                    
-                    const values = line.split(',').map(v => v.trim());
-                    if (values.length >= 3) {
-                        songs.push({
-                            id: values[0],
-                            title: values[1],
-                            artist: values[2]
-                        });
-                    }
-                }
-                
-                renderTable(songs);
-                updateStats(songs.length, songs.length);
-            }
-            
-            function renderTable(data) {
-
-                loader.style.display = 'none';
-                
-                if (data.length === 0) {
-                    noResults.style.display = 'block';
-                    songTable.style.display = 'none';
-                    songStats.style.display = 'none';
-                    return;
-                }
-                
-                noResults.style.display = 'none';
-                songTable.style.display = 'table';
-                songStats.style.display = 'block';
-                
-                songTableBody.innerHTML = '';
-                
-                data.forEach(song => {
-                    const row = document.createElement('tr');
-                    
-                    const idCell = document.createElement('td');
-                    idCell.className = 'song-id';
-                    idCell.textContent = song.id;
-                    row.appendChild(idCell);
-                    
-                    const titleCell = document.createElement('td');
-                    titleCell.innerHTML = `
-                        <div class="song-title">${song.title}</div>
-                    `;
-                    row.appendChild(titleCell);
-                    
-                    const artistCell = document.createElement('td');
-                    artistCell.innerHTML = `
-                        <div class="song-artist">${song.artist}</div>
-                    `;
-                    row.appendChild(artistCell);
-                    
-                    songTableBody.appendChild(row);
-                });
-                
-                updateStats(data.length, songs.length);
-            }
-            
-            function updateStats(visible, total) {
-                visibleCount.textContent = visible;
-                totalCount.textContent = total;
-            }
-            
-            function filterSongs() {
-                const searchTerm = searchInput.value.toLowerCase().trim();
-                
-                if (!searchTerm) {
-                    renderTable(songs);
-                    return;
-                }
-                
-                const filteredSongs = songs.filter(song => {
-                    return (
-                        (song.id && song.id.toLowerCase().includes(searchTerm)) ||
-                        (song.title && song.title.toLowerCase().includes(searchTerm)) ||
-                        (song.artist && song.artist.toLowerCase().includes(searchTerm))
-                    );
-                });
-                
-                renderTable(filteredSongs);
-            }
-            
-            function sortSongs(column) {
-
-                if (currentSort.column === column) {
-                    currentSort.direction = currentSort.direction * -1;
-                } else {
-                    currentSort.column = column;
-                    currentSort.direction = 1;
-                }
-                
-                sortHeaders.forEach(th => {
-                    th.classList.remove('sorted-asc', 'sorted-desc');
-                });
-                
-                const currentHeader = document.querySelector(`th[data-sort="${column}"]`);
-                currentHeader.classList.add(currentSort.direction === 1 ? 'sorted-asc' : 'sorted-desc');
-                
-                const sortedSongs = [...songs].sort((a, b) => {
-                    let valueA = a[column] || '';
-                    let valueB = b[column] || '';
-                    
-                    if (column === 'id') {
-                        const numA = parseInt(valueA, 10);
-                        const numB = parseInt(valueB, 10);
-                        
-                        if (!isNaN(numA) && !isNaN(numB)) {
-                            return (numA - numB) * currentSort.direction;
-                        }
-                    }
-                    
-                    return valueA.localeCompare(valueB) * currentSort.direction;
-                });
-                
-                renderTable(sortedSongs);
-            }
-        });
-
-    </script>
 
 </body>
 </html>
